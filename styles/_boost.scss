@@ -1,0 +1,28 @@
+
+.boost{
+     background-image: url(/images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #3b3054;
+    text-align: center;
+    padding: 2rem;
+   margin-top: 5em;
+    & h1{
+        color: white;
+    }
+    & button{
+        background: $Cyan;
+        border: none;
+        outline: none;
+        padding: .6rem 2rem;
+        border-radius: 1rem;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      transition: all .4s ease;
+        &:hover{
+            opacity: .7;
+        }
+    }
+
+}

@@ -1,0 +1,66 @@
+
+
+.hero{
+   
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     max-width: 1000px;
+     margin: 2rem auto;
+     gap: 4rem;
+     .img-hero{
+        
+       & img{
+        width: 100%;
+       }
+     }
+
+     .details { 
+     
+
+        & h1{
+            font-size: 3.5rem;
+            color: $VeryDarkBlue;
+            font-weight: bold;
+        }
+
+        & p{
+            color: $GrayishViolet;
+            line-height: 1.3rem;
+             margin-top: -5px;
+        }
+
+        & button{
+            background: $Cyan;
+            border: none;
+            outline: none;
+            padding: .6rem 2rem;
+            border-radius: 1rem;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          transition: all .4s ease;
+            &:hover{
+                opacity: .7;
+            }
+        }
+     }
+}
+
+
+@media (max-width: 997px){
+    .hero{
+        flex-direction: column-reverse;
+        gap: .5rem;
+
+        & .details{
+            text-align: center;
+    
+           & h1{
+            font-size: 2rem;
+            
+           }
+        }
+    }
+}
