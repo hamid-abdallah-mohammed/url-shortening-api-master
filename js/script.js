@@ -10,6 +10,15 @@ function toggleMenu() {
   btnHamburger.classList.toggle("active");
 }
 
+// function myFunction(x) {
+//   if (x.matches) { // If media query matches
+//     element.style.flexDecoration = 'column'
+//   } 
+// }
+
+// var x = window.matchMedia("(max-width: 638px)")
+// myFunction(x) // Call listener function at run time
+// x.addListener(myFunction)
 
 const form = document.querySelector('form input')
 const shortenBtn = document.querySelector('.shorten')
@@ -53,21 +62,44 @@ document.body.insertBefore(element, statistic_info)
 element.style.display = 'flex'
 element.style.justifyContent = 'space-evenly';
 element.style.alignItems = 'center';
-element.style.gap = '.6rem'
+element.style.gap = '.5rem'
 element.style.boxShadow = '0 0 4px 0 #333'
 element.style.width = '70%'
 element.style.margin = "3rem auto "
 element.style.border = 'none'
 element.style.borderRadius = '.5rem'
+element.style.padding = '1rem'
+
 // set input value none
 form.value = ""
+
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    element.style.flexDirection = 'column'
+  } else {
+    element.style.flexDirection = 'row'
+  }
+}
+
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+
     }
 
   
-
+  
+ 
 
 }
 
 form.addEventListener('focus', () => {
        form.classList.remove('warning');
 })
+
+
+
+
+
